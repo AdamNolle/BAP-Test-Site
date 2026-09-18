@@ -248,15 +248,21 @@ h1, h2, h3, p { margin-top: 0; }
 .identity-track {
   display: flex;
   width: max-content;
-  align-items: center;
-  gap: 32px;
   padding: 14px 0;
   animation: marquee 24s linear infinite;
   font-family: var(--mono);
   text-transform: uppercase;
 }
-.identity-track span { font-size: 24px; font-weight: 700; letter-spacing: -0.08em; }
-.identity-track b { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; }
+.identity-sequence {
+  display: flex;
+  min-width: 100vw;
+  flex: none;
+  align-items: center;
+  justify-content: space-around;
+}
+.identity-item { display: flex; align-items: center; gap: clamp(18px, 2.2vw, 32px); padding: 0 clamp(18px, 2vw, 36px); }
+.identity-item span { font-size: 24px; font-weight: 700; letter-spacing: -0.08em; }
+.identity-item b { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; }
 
 .section-pad { max-width: 1440px; margin: 0 auto; padding: 94px 5vw; }
 .section-kicker { margin-bottom: 42px; color: var(--red); font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
@@ -357,7 +363,6 @@ section[id] { scroll-margin-top: 74px; }
 .officer-image { position: relative; aspect-ratio: 0.83; overflow: hidden; background: var(--paper); }
 .officer-image img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.78); transition: filter 0.4s, transform 0.4s; }
 .officer-card:hover .officer-image img { filter: saturate(1); transform: scale(1.04); }
-.officer-image span { position: absolute; top: 11px; left: 11px; color: var(--cream); font-family: var(--mono); font-size: 10px; text-shadow: 0 1px 5px #000; }
 .officer-info .role { color: var(--red); font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; line-height: 1.4; text-transform: uppercase; }
 .officer-info h3 { margin: 9px 0 12px; color: var(--ink); font-size: 26px; font-weight: 600; letter-spacing: -0.05em; }
 .officer-info p { margin-bottom: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
