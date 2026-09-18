@@ -18,6 +18,6 @@ npm run build
 
 ## Deployment
 
-The `main` branch deploys automatically to GitHub Pages:
+The production build is published from the `gh-pages` branch:
 
 https://adamnolle.github.io/BAP-Test-Site/
